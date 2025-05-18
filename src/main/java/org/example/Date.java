@@ -68,6 +68,12 @@ public class Date {
 
         return day + "/" + month + "/" + year;
     }
+    public boolean equals(Date other){
+        if (this.day == other.day &&  this.month == other.month && this.year == other.year){
+            return true;
+        }
+        return false;
+    }
 
 
 
