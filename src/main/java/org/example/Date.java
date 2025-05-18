@@ -74,6 +74,12 @@ public class Date {
         }
         return false;
     }
+    public boolean before(Date other) {
+        if (this.day == other.day && this.month == other.month && this.year == other.year) {
+        return true;
+        }
+        return false;
+    }
 
 
 
