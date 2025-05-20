@@ -6,7 +6,7 @@ public class Weight {
 
 
     Weight(int Kg, int Grams) {
-        this.Kg = Kg = Kg += Grams / 1000;
+        this.Kg  = Kg += Grams / 1000;
         this.Grams = Grams = Grams % 1000;
     }
 
@@ -22,6 +22,16 @@ public class Weight {
     public boolean lessThen(Weight other) {
 
         return other.Grams > Grams && other.Kg == Kg || other.Grams == Grams && other.Kg > Kg || other.Grams > Grams && other.Kg > Kg;
+    }
+
+    public Weight add(Weight other){
+        if (other.Grams + this.Grams > 1000) {
+
+           return  new Weight(this.Grams + other.Grams  % 1000,(this.Kg + other.Kg)+  this.Grams + other.Grams / 1000);
+
+
+        }
+        else return new Weight (other.Kg+ this.Kg , other.Grams + Grams);
     }
 
 
