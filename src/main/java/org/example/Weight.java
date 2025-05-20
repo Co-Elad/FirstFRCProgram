@@ -14,6 +14,11 @@ public class Weight {
         return "Kg " + Kg + "and gr " + Grams;
     }
 
+    public  boolean equals(Weight other){
+       ;
+        return other.Grams == Grams || other.Kg == Kg;
+    }
+
 
 
 }
